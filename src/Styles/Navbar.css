@@ -1,0 +1,38 @@
+#nav {
+    height: 2rem;
+    margin: 0.5rem 30vh;
+}
+
+#navbar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#navbar ul li {
+    text-decoration: none;
+    display: inline;
+}
+
+#navbar li img {
+    width: 50%;
+    height: 50%;
+}
+
+.nav-left {
+    float: left;
+}
+
+.nav-right {
+    float: right;
+}
+
+.nav-right li {
+    padding: 1rem 2.5rem 1rem 2.5rem;
+}
+
+.nav-right li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: black;
+    font-size: 70%;
+}
