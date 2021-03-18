@@ -1,8 +1,8 @@
-import React, { Component } from 'react'
-import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom'
+import React, { Component } from 'react';
+import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 
-import '../Styles/Navbar.css'
-import logo from '../Resources/Logo.svg'
+import '../Styles/Navbar.css';
+import logo from '../Resources/Logo.svg';
 
 import Homepage from './Homepage';
 import AboutUs from './AboutUs';

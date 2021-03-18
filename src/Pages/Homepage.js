@@ -1,6 +1,7 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 
-import officeImg from '../Resources/officeSpace1.jpg'
+import '../Styles/Homepage.css';
+import officeImg from '../Resources/officeSpace1.jpg';
 
 class Homepage extends Component {
     render() {
