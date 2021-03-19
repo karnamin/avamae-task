@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import '../Styles/Homepage.css';
-import officeImg from '../Resources/officeSpace1.jpg';
+import officeSpace from '../Resources/officeSpace1.jpg';
 
 class Homepage extends Component {
     render() {
@@ -21,7 +21,7 @@ class Homepage extends Component {
                         </ul>
                     </div>
                     <div className="column">
-                        <img src={officeImg} alt="office"/>
+                        <img src={officeSpace} alt="office"/>
                     </div>
                 </div>
                 <div className='row imgBackground'>
