@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 
-
 class ContactUs extends Component {
     constructor(props) {
         super(props)
@@ -23,7 +22,6 @@ class ContactUs extends Component {
         }
         this.handleChange = this.handleChange.bind(this);
         this.handleRadioCheck = this.handleRadioCheck.bind(this);
-        //this.createJSON = this.createJSON(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
@@ -35,24 +33,16 @@ class ContactUs extends Component {
         this.setState({ addressRadio: evt.target.checked });
     }
 
-    // createJSON() {
-        
-        
-    //     return data;
-    // }
-
     handleSubmit(evt) {
         evt.preventDefault();
-        //const data = JSON.stringify(this.state);
-    
-        //const data = this.createJSON();
+
         let phNumbers = [this.state.phNumber];
 
         if(this.state.addSecondPhNum) {
             phNumbers = [...phNumbers,this.state.phNumberTwo];
         }
 
-        const data = {
+        let data = {
             FullName: this.state.fullName,
             EmailAddress: this.state.email,
             PhoneNumbers: phNumbers,
@@ -61,16 +51,15 @@ class ContactUs extends Component {
         };
 
         if(this.state.addressRadio) {
-            const addDetails = {
-                AddressDetails: {
+            let AddressDetails = {
                 AddressLine1: this.state.addressLineOne,
                 AddressLine2: this.state.addressLineTwo,
                 CityTown: this.state.city,
                 StateCounty: this.state.county,
                 Postcode: this.state.postcode,
                 Country: this.state.country
-            }};
-            data = {...data, addDetails}
+            };
+            data = {...data, AddressDetails}
         }
         
         const dataJSON = JSON.stringify(data);
