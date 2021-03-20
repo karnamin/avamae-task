@@ -1,4 +1,6 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
+import axios from 'axios'
+
 
 class ContactUs extends Component {
     constructor(props) {
@@ -20,8 +22,9 @@ class ContactUs extends Component {
             country: ''
         }
         this.handleChange = this.handleChange.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this);
         this.handleRadioCheck = this.handleRadioCheck.bind(this);
+        //this.createJSON = this.createJSON(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     handleChange(evt) {
@@ -32,9 +35,63 @@ class ContactUs extends Component {
         this.setState({ addressRadio: evt.target.checked });
     }
 
+    // createJSON() {
+        
+        
+    //     return data;
+    // }
+
     handleSubmit(evt) {
         evt.preventDefault();
-        alert(`submitted ${this.state.fullName}`);
+        //const data = JSON.stringify(this.state);
+    
+        //const data = this.createJSON();
+        let phNumbers = [this.state.phNumber];
+
+        if(this.state.addSecondPhNum) {
+            phNumbers = [...phNumbers,this.state.phNumberTwo];
+        }
+
+        const data = {
+            FullName: this.state.fullName,
+            EmailAddress: this.state.email,
+            PhoneNumbers: phNumbers,
+            Message: this.state.message,
+            bIncludeAddressDetails: this.state.addressRadio,
+        };
+
+        if(this.state.addressRadio) {
+            const addDetails = {
+                AddressDetails: {
+                AddressLine1: this.state.addressLineOne,
+                AddressLine2: this.state.addressLineTwo,
+                CityTown: this.state.city,
+                StateCounty: this.state.county,
+                Postcode: this.state.postcode,
+                Country: this.state.country
+            }};
+            data = {...data, addDetails}
+        }
+        
+        const dataJSON = JSON.stringify(data);
+
+        const url = 'https://interview-assessment.api.avamae.co.uk/api/v1/contact-us/submit';
+
+        axios({
+            method: 'POST',
+            url: url,
+            data: dataJSON,
+            headers: { "Content-Type": "application/json" }
+        })
+        .then((res) => {
+            console.log(res);
+        })
+        .catch((err) => {
+            console.log(err);
+        });
+        
+        console.log(dataJSON);
+
         this.setState({
             fullName: '',
             email: '',
@@ -61,7 +118,7 @@ class ContactUs extends Component {
                     <p>
                         Proin eget lacus scelerisque, accumsan purus vel, aliquam erat. Aenean enim massa, ullamcorper ut elementum ac, imperdiet at urna. Donec nec diam sit amet neque tincidunt convallis vel eu nisl.
                     </p>
-                    <form action="" onSubmit={this.handleSubmit}>
+                    <form  onSubmit={this.handleSubmit}>
                         <div>
                             <label htmlFor="fullName">Full name</label>
                             <input type="text" name="fullName" id="fullName" value={this.state.fullName} onChange={this.handleChange} />
@@ -82,7 +139,7 @@ class ContactUs extends Component {
                             Add new phone number
                         </button>
                         <label htmlFor="message">Message <span>Maximum text length is 500 characters</span></label>
-                        <input type="text" size="50" maxLength="500" />
+                        <input type="text" size="50" maxLength="500" name="message" id="message" value={this.state.message} onChange={this.handleChange} />
                         <label htmlFor="addressRadio">Add address details</label>
                         <input type="checkbox" name="addressRadio" checked={this.state.addressRadio} onChange={this.handleRadioCheck} />
                         {this.state.addressRadio ? (
