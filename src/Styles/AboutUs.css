@@ -1,0 +1,21 @@
+.About {
+    /*margin: 0.5rem 30vh;*/
+    width: 75vw;
+    margin: auto;
+    margin-bottom: 5vh;
+}
+
+.About img {
+    max-width: 100%;
+    height: auto;
+}
+
+.aboutUsImg {
+    text-align: center;
+}
+
+.aboutUsImg img {
+    width: 60%;
+    border-radius: 3px;
+    margin: 1% 0;
+}

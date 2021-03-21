@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 
+import '../Styles/AboutUs.css'
+import officeSpace1 from '../Resources/officeSpace1.jpg';
+
 class AboutUs extends Component {
     render() {
         return (
@@ -12,7 +15,7 @@ class AboutUs extends Component {
                     Nullam dignissim arcu quis est vestibulum pulvinar in ut augue. Maecenas consectetur sed urna eget iaculis. Pellentesque sagittis dignissim cursus. Mauris suscipit turpis eget lacus ullamcorper, ut eleifend mi pharetra. Pellentesque tristique neque at mauris rhoncus dictum. Donec lacinia vehicula nibh. Aliquam eu lobortis dolor. Sed purus risus, faucibus et vestibulum et, fringilla sed risus. Nam massa mauris, dictum nec tristique quis, interdum at nisi.
                 </p>
                 <div>
-                    <img src={officeSpace} alt="office space"/>
+                    <img src={officeSpace1} alt="office space"/>
                 </div>
                 <p>
                     Cras varius, erat eu aliquam pellentesque, arcu ante tempus mi, a tincidunt neque diam cursus ex. Nunc eget lectus a ligula interdum congue. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Morbi porta ante eu vehicula rhoncus. Duis hendrerit quis magna nec finibus. Integer magna ante, posuere non elit id, elementum tristique tortor. Pellentesque lacinia at erat ut commodo. In vitae augue nec nibh accumsan tincidunt. Donec lacinia nunc id finibus laoreet. Integer nibh mauris, volutpat sed ipsum eget, gravida mattis ex. Nunc dignissim dignissim nunc sit amet facilisis. In egestas ipsum interdum odio venenatis egestas. Donec ullamcorper metus sapien, eu sollicitudin lacus tincidunt nec. Sed pretium nibh vitae mi interdum, at tempor sem vulputate. Aenean consectetur fermentum ex in lacinia.
