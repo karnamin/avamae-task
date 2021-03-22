@@ -1,0 +1,8 @@
+.Footer {
+    height: 5vh;
+    width: 75vw;
+    text-align: end;
+    font-size: small;
+    border-top: 1px solid grey;
+    margin: 0 auto 1% auto;
+}
