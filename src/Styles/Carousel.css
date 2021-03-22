@@ -1,0 +1,19 @@
+.carousel {
+    width: 100vw;
+    overflow: hidden;
+    height: 60vh;
+    position: relative;
+}
+
+.carousel-text {
+    position: absolute;
+    margin-left: 15vw;
+    top: 25%;
+    color: white;
+    width: 30%;
+}
+
+.carousel-img {
+    z-index: -1;
+    width: 100%;
+}

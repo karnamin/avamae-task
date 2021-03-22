@@ -1,6 +1,7 @@
 #nav {
     height: 2rem;
-    margin: 0.5rem 30vh;
+    width: 75vw;
+    margin: 1.5rem auto 1rem auto;
 }
 
 #navbar ul {
@@ -26,13 +27,16 @@
     float: right;
 }
 
-.nav-right li {
+.nav-link {
     padding: 1rem 2.5rem 1rem 2.5rem;
-}
-
-.nav-right li a {
     text-decoration: none;
-    text-transform: uppercase;
     color: black;
     font-size: 70%;
+}
+
+.login {
+    background-color: rgba(173, 216, 230, 0.5);
+    border-radius: 4px;
+    color: #477280;
+    font-weight: 700;
 }

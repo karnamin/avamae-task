@@ -18,10 +18,10 @@ class Navbar extends Component {
                             <li><img src={logo} alt="logo"/></li>
                         </div>
                         <div className='nav-right'>
-                            <li><Link to='/'>Home</Link></li>
-                            <li><Link to='/about-us'>About Us</Link></li>
-                            <li><Link to='/contact-us'>Contact Us</Link></li>
-                            <li><a href="#">Log In</a></li>
+                            <li><Link to='/' className='nav-link'>HOME</Link></li>
+                            <li><Link to='/about-us' className='nav-link'>ABOUT US</Link></li>
+                            <li><Link to='/contact-us' className='nav-link'>CONTACT US</Link></li>
+                            <li><Link to='#' className='nav-link login'>Log In</Link></li>
                         </div>
                         
                     </ul>
