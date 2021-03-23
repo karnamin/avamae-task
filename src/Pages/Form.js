@@ -122,11 +122,11 @@ class Form extends Component {
                     <div className='form-oneline'>
                         <div className='form-grow'>
                             <label htmlFor="fullName">Full name</label>
-                            <input type="text" name="fullName" id="fullName" value={this.state.fullName} onChange={this.handleChange} />
+                            <input type="text" name="fullName" id="fullName" required value={this.state.fullName} onChange={this.handleChange} />
                         </div>
                         <div className='form-grow'>
                             <label htmlFor="email">Email address</label>
-                            <input type="text" name="email" id="email" value={this.state.email} onChange={this.handleChange} />
+                            <input type="text" name="email" id="email" required value={this.state.email} onChange={this.handleChange} />
                         </div>
                     </div>
                     <div className='form-whole-line'>
@@ -143,7 +143,7 @@ class Form extends Component {
                         Add new phone number
                     </button>
                     <label htmlFor="message">Message <span>Maximum text length is 500 characters</span></label>
-                    <input type="text" size="50" maxLength="500" name="message" id="message" value={this.state.message} onChange={this.handleChange} />
+                    <input type="text" size="50" maxLength="500" name="message" id="message" required value={this.state.message} onChange={this.handleChange} />
                     <label htmlFor="addressRadio">Add address details</label>
                     <input type="checkbox" name="addressRadio" checked={this.state.addressRadio} onChange={this.handleRadioCheck} />
                     {this.state.addressRadio ? (
@@ -151,7 +151,7 @@ class Form extends Component {
                             <div className='form-oneline'>
                                 <div className='form-grow'>
                                     <label htmlFor="addressLineOne">Addess line 1</label>
-                                    <input type="text" name="addressLineOne" id="addressLineOne" value={this.state.addressLineOne} onChange={this.handleChange} />
+                                    <input type="text" name="addressLineOne" id="addressLineOne" required value={this.state.addressLineOne} onChange={this.handleChange} />
                                 </div>
                                 <div className='form-grow'>
                                     <label htmlFor="addressLineTwo">Address line 2 <span>- optional</span></label>
@@ -161,19 +161,19 @@ class Form extends Component {
                             <div className='form-oneline'>
                                 <div className='form-grow'>
                                     <label htmlFor="city">City/Town</label>
-                                    <input type="text" name="city" id="city" value={this.state.city} onChange={this.handleChange} />
+                                    <input type="text" name="city" id="city" required value={this.state.city} onChange={this.handleChange} />
                                 </div>
                                 <div className='form-grow'>
                                     <label htmlFor="county">State/County</label>
-                                    <input type="text" name="county" id="county" value={this.state.county} onChange={this.handleChange} />
+                                    <input type="text" name="county" id="county" required value={this.state.county} onChange={this.handleChange} />
                                 </div>
                                 <div className='form-grow'>
                                     <label htmlFor="postcode">Postcode</label>
-                                    <input type="text" name="postcode" id="postcode" value={this.state.postcode} onChange={this.handleChange} />
+                                    <input type="text" name="postcode" id="postcode" required value={this.state.postcode} onChange={this.handleChange} />
                                 </div>
                                 <div className='form-grow'>
                                     <label htmlFor="country">Country</label>
-                                    <input type="text" name="country" id="country" value={this.state.country} onChange={this.handleChange} />
+                                    <input type="text" name="country" id="country" required value={this.state.country} onChange={this.handleChange} />
                                 </div>
                             </div>
                         </div>
