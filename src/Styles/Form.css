@@ -1,0 +1,49 @@
+input,
+label {
+    display: block;
+    margin: 0.5rem 0;
+}
+
+input {
+    background-color: rgb(245, 244, 244);
+    border: 1px solid grey;
+    padding: 0.5rem;
+}
+
+.form-oneline {
+    display: flex;
+    flex-direction: row;
+}
+
+.form-grow {
+    flex-grow: 1;
+}
+
+.form-grow input {
+    width: 80%;
+}
+
+.form-whole-line input {
+    width: 90%;
+}
+
+.add-phone-btn {
+    background-color: rgba(173, 216, 230, 0.5);
+    border-radius: 4px;
+    color: #477280;
+    font-weight: 700;
+    border: none;
+    height: 2rem;
+    width: 90%;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+.submit-btn {
+    background-color: #005dcc;
+    border-radius: 4px;
+    text-decoration: none;
+    color: white;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    width: 100%;
+}

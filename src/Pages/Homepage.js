@@ -54,7 +54,7 @@ class Homepage extends Component {
                     </div>
                 </div>
                 <div className='row imgBackground'>
-                    <div className="column marginColLeft blackWindow">
+                    <div className="column column-i marginColLeft blackWindow">
                         <h2>Praesent luctus facilisis nulla, et lacinia eros</h2>
                         <p>
                             Interdum et malesuada fames ac ante ipsum primis in faucibus. Aenean aliquam odio a mauris mattis, vel lobortis est eleifend. In luctus urna ut posuere tincidunt. In porta fringilla sapien, vitae tristique mi varius at. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas vitae congue turpis. Etiam vulputate placerat maximus. Etiam consectetur nibh ut sem ornare pretium.
@@ -63,7 +63,7 @@ class Homepage extends Component {
                             <Link to='#' className='btn login-btn'>Log In</Link>
                         </div>
                     </div>
-                    <div className="column marginColRight">
+                    <div className="column column-i marginColRight">
                     </div>
                 </div>
                 <div className='withMargin'>

@@ -17,3 +17,17 @@
     z-index: -1;
     width: 100%;
 }
+
+@media only screen and (max-width: 600px) {
+    .carousel-text {
+        width: 85%;
+        margin: auto;
+        text-align: center;
+    }
+
+    .carousel-img {
+        height: 70vh;
+        width: auto;
+        margin-left: -55%;
+    }
+}
