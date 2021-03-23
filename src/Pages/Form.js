@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import axios from 'axios'
 
 import '../Styles/Form.css'
+import submitLogo from '../Resources/Icon_Submit.svg'
 
 class Form extends Component {
     constructor(props) {
@@ -179,7 +180,10 @@ class Form extends Component {
                         </div>
                     ): null}
                     <div>
-                        <button className='submit-btn'>Submit</button>
+                    <button className='submit-btn'>
+                        <img className='submit-logo' src={submitLogo} alt="submit-logo"/>
+                        Submit
+                    </button>
                     </div>
                 </form>
             </div>

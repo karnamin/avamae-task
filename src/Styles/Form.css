@@ -47,3 +47,9 @@ input {
     padding: 0.5rem 1rem 0.5rem 1rem;
     width: 100%;
 }
+
+.submit-logo {
+    float: left;
+    max-height: 15px;
+    max-width: 15px;
+}
